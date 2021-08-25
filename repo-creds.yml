@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github-repo
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/kutumbaburumba/app-of-apps.git
+  password: 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
+  username: kirill.yasinovskiy@computacenter.com
