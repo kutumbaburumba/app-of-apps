@@ -16,7 +16,7 @@ spec:
     kind: Application
   project: default
   source:
-    path: bootstrap/argo-application-set
+    path: bootstrap/cluster-resources/in-cluster/argo-application-set
     repoURL: https://github.com/kutumbaburumba/app-of-apps.git
   syncPolicy:
     automated:
