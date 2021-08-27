@@ -40,7 +40,7 @@ spec:
       project: ""
       source:
         path: bootstrap/cluster-resources/{{name}}
-        repoURL: https://github.com/kutumbaburumba/bootstrap.git
+        repoURL: https://github.com/kutumbaburumba/app-of-apps.git
       syncPolicy:
         automated:
           allowEmpty: true
