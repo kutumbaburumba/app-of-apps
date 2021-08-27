@@ -37,7 +37,7 @@ spec:
         jsonPointers:
         - /status
         kind: Application
-      project: ""
+      project: "default"
       source:
         path: bootstrap/cluster-resources/{{name}}
         repoURL: https://github.com/kutumbaburumba/app-of-apps.git
