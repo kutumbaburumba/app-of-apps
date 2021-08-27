@@ -30,7 +30,7 @@ spec:
   - git:
       files:
       - path: apps/**/management/config.json
-      repoURL: https://github.com/kutumbaburumba/app-of-apps.git
+      repoURL: https://msg-services-marketplace-saas@dev.azure.com/msg-services-marketplace-saas/applications/_git/argo-app-of-apps
       requeueAfterSeconds: 20
       revision: ""
       template:

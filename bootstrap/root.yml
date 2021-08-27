@@ -19,7 +19,7 @@ spec:
   project: default
   source:
     path: projects
-    repoURL: https://github.com/kutumbaburumba/app-of-apps.git
+    repoURL: https://msg-services-marketplace-saas@dev.azure.com/msg-services-marketplace-saas/applications/_git/argo-app-of-apps
   syncPolicy:
     automated:
       allowEmpty: true
