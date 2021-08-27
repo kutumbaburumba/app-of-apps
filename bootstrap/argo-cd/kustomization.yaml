@@ -4,5 +4,4 @@ kind: Kustomization
 namespace: argocd
 resources: 
   - "https://github.com/argoproj/argo-cd/manifests/base?ref=v2.1.1"
-  - "https://github.com/argoproj-labs/applicationset/manifests/base?ref=v0.2.0"
   - ./github-creds.yaml
