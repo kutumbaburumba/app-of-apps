@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github-creds
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+data:
+  url: aHR0cHM6Ly9naXRodWIuY29tL2t1dHVtYmFidXJ1bWJhL2FwcC1vZi1hcHBzLmdpdAo=
+  password: Z2hwX1BuTkVqNFF4SndDU092QXlPVnNTN2tST1RldnRyQTNkekZTdwo=
+  username: a2lyaWxsLnlhc2lub3Zza2l5QGNvbXB1dGFjZW50ZXIuY29tCg==
