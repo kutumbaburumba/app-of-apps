@@ -8,6 +8,6 @@ metadata:
     argocd.argoproj.io/secret-type: repository
 type: Opaque
 data:
-  url: aHR0cHM6Ly9naXRodWIuY29tL2t1dHVtYmFidXJ1bWJhL2FwcC1vZi1hcHBzLmdpdAo=
-  password: Z2hwX1BuTkVqNFF4SndDU092QXlPVnNTN2tST1RldnRyQTNkekZTdwo=
+  url: aHR0cHM6Ly9naXRodWIuY29tL2t1dHVtYmFidXJ1bWJhL2FwcC1vZi1hcHBzLmdpdA==
+  password: Z2hwX1BuTkVqNFF4SndDU092QXlPVnNTN2tST1RldnRyQTNkekZTdwo==
   username: a2lyaWxsLnlhc2lub3Zza2l5QGNvbXB1dGFjZW50ZXIuY29tCg==
