@@ -2,8 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   labels:
-    app.kubernetes.io/name: argo-cd
-  name: argo-cd
+    app.kubernetes.io/name: argo-application-set
+  name: argo-application-set
   namespace: argocd
 spec:
   destination:
