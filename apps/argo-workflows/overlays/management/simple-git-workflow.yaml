@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: input-artifact-git-
+spec:
+  entrypoint: git-clone
+  templates:
+  - name: git-clone
+    inputs:
+      artifacts:
+      - name: argo-source
+        path: /src
+        git:
+          repo: https://msg-services-marketplace-saas@dev.azure.com/msg-services-marketplace-saas/applications/_git/test-application
+          revision: "HEAD"
+          usernameSecret:
+            name: azure-devops-creds
+            key: username
+          passwordSecret:
+            name: azure-devops-creds
+            key: password
+          depth: 1
+    container:
+      image: golang:1.17
+      command: [sh, -c]
+      args: ["git status && ls && cat VERSION"]
+      workingDir: /src
