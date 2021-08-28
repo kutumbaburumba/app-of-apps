@@ -1,6 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Workflow
+kind: WorkflowTemplate
 metadata:
+  annotations:
+    workflows.argoproj.io/description: |
+      Checkout out from Git, build and test a Golang application.
+    workflows.argoproj.io/tags: git
+    workflows.argoproj.io/version: '>= 2.9.0'
   generateName: input-artifact-git-
 spec:
   entrypoint: git-clone

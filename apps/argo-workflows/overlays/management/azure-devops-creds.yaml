@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: azure-devops-creds
+  namespace: argo
+type: Opaque
+data:
+  password: c3llbGJ2aXU1bHFpYzN6eGphYnFmNWozYXR2aWRvc2w1dXo1cHE2anZxa2ZleHpsZHZyYQ==
+  username: c2Fhc193b3JrZXJfYm90
