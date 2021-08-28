@@ -3,7 +3,6 @@ kind: Kustomization
 bases:
   - ../../base
   - workflow-sa.yaml
-  - simple-git-workflow.yaml
   - azure-devops-creds.yaml
 patchesStrategicMerge:
   - workflow-controller-configmap.yaml
