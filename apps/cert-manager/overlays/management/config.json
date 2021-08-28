@@ -1,0 +1,10 @@
+{
+	"appName": "cert-manager",
+	"userGivenName": "cert-manager",
+	"destNamespace": "cert-manager",
+	"destServer": "https://kubernetes.default.svc",
+	"srcPath": "apps/cert-manager/overlays/management",
+	"srcRepoURL": "https://github.com/kutumbaburumba/app-of-apps.git",
+	"srcTargetRevision": "",
+	"labels": null
+}
