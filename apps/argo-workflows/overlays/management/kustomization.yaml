@@ -3,5 +3,6 @@ kind: Kustomization
 bases:
   - ../../base
   - workflow-sa.yaml
+  - simple-git-workflow.yaml
 patchesStrategicMerge:
   - workflow-controller-configmap.yaml
