@@ -6,6 +6,7 @@ metadata:
   name: webhook
   namespace: argo-events
 spec:
+  serviceAccountName: operate-workflow-sa
   service:
     ports:
       - port: 12000
