@@ -3,30 +3,59 @@ kind: WorkflowTemplate
 metadata:
   annotations:
     workflows.argoproj.io/description: |
-      Checkout out from Git, build and test a Golang application.
+      Checkout out from Git and test 
     workflows.argoproj.io/tags: git
     workflows.argoproj.io/version: '>= 2.9.0'
   name: input-artifact-git
 spec:
-  entrypoint: git-clone
+  serviceAccountName: argo-workflow
+  entrypoint: main
+  arguments:
+    parameters:
+      - name: repo
+        value: https://msg-services-marketplace-saas@dev.azure.com/msg-services-marketplace-saas/applications/_git/test-application
+      - name: branch
+        value: main
+      - name: output
+        value: test-application
   templates:
-  - name: git-clone
-    inputs:
-      artifacts:
-      - name: argo-source
-        path: /src
-        git:
-          repo: https://msg-services-marketplace-saas@dev.azure.com/msg-services-marketplace-saas/applications/_git/test-application
-          revision: "HEAD"
-          usernameSecret:
-            name: azure-devops-creds
-            key: username
-          passwordSecret:
-            name: azure-devops-creds
-            key: password
-          depth: 1
-    container:
-      image: golang:1.17
-      command: [sh, -c]
-      args: ["git status && ls && cat VERSION"]
-      workingDir: /src
+    - name: main
+      steps:
+        - - name: checkout
+            template: checkout
+        - - name: git-status
+            template: git-status
+    - name: checkout
+      script:
+        image: golang:1.17
+        workingDir: /work
+        args: [sh]
+        source: | 
+          MY_PAT=4tq4cxmdvdqgacrwds2pfyahlaurdty73lrr5bttqlb3wocpm74a
+          B64_PAT=$(printf "%s"":$MY_PAT" | base64)
+          git -c http.extraHeader="Authorization: Basic ${B64_PAT}" clone --depth 1 --single-branch --branch {{workflow.parameters.branch}} {{workflow.parameters.repo}} .
+        volumeMounts:
+          - mountPath: /work
+            name: work
+    - name: git-status
+      script:
+        image: golang:1.17
+        workingDir: /work
+        args:
+          - sh
+        source: git status && ls && cat README.md
+        volumeMounts:
+          - mountPath: /work
+            name: work
+  volumeClaimTemplates:
+    # A shared work volume.
+    - name: work
+      metadata:
+        name: work
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 64Mi
+
+
