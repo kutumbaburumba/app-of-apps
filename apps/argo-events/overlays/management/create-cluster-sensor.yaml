@@ -11,7 +11,7 @@ spec:
   dependencies:
     - name: payload
       eventSourceName: webhook
-      eventName: create-clauster
+      eventName: create-cluster
   triggers:
     - template:
         name: webhook-workflow-trigger
