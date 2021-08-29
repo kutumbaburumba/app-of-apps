@@ -1,0 +1,10 @@
+{
+	"appName": "argo-workflows",
+	"userGivenName": "argo-workflows",
+	"destNamespace": "argo",
+	"destServer": "https://kubernetes.default.svc",
+	"srcPath": "apps/argo-workflows/overlays/management",
+	"srcRepoURL": "https://github.com/kutumbaburumba/app-of-apps.git",
+	"srcTargetRevision": "",
+	"labels": null
+}
