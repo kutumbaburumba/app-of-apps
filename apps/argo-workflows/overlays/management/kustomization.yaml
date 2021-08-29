@@ -4,5 +4,6 @@ bases:
   - ../../base
   - workflow-sa.yaml
   - azure-devops-creds.yaml
+  - simple-git-workflow.yaml
 patchesStrategicMerge:
   - workflow-controller-configmap.yaml
