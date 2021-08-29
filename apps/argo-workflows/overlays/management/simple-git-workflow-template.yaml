@@ -7,6 +7,7 @@ metadata:
     workflows.argoproj.io/tags: git
     workflows.argoproj.io/version: '>= 2.9.0'
   name: input-artifact-git
+  namespace: argo
 spec:
   serviceAccountName: argo-workflow
   entrypoint: main
