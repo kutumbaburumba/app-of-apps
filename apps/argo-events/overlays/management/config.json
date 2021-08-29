@@ -1,9 +1,9 @@
 {
-	"appName": "argo-workflows",
-	"userGivenName": "argo-workflows",
-	"destNamespace": "argo",
+	"appName": "argo-events",
+	"userGivenName": "argo-events",
+	"destNamespace": "argo-events",
 	"destServer": "https://kubernetes.default.svc",
-	"srcPath": "apps/argo-workflows/overlays/management",
+	"srcPath": "apps/argo-events/overlays/management",
 	"srcRepoURL": "https://github.com/kutumbaburumba/app-of-apps.git",
 	"srcTargetRevision": "",
 	"labels": null
