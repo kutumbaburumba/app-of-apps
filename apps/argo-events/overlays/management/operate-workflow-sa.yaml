@@ -12,6 +12,7 @@ kind: ClusterRole
 metadata:
   name: operate-workflow-role
 rules:
+  # allow to manage workflows and templates
   - apiGroups:
       - argoproj.io
     verbs:
@@ -20,6 +21,7 @@ rules:
       - workflows
       - clusterworkflowtemplates
       - workflowtemplates
+  # allo to manage pods
   - apiGroups:
       - ""
     resources:
