@@ -30,7 +30,7 @@ spec:
               metadata:
                 generateName: webhook-input-artifact-git-
               spec:
-                serviceAccountName: argo-workflow
+                serviceAccountName: operate-workflow-sa
                 entrypoint: main
                 arguments:
                   parameters:
