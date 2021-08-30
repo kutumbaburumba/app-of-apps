@@ -3,3 +3,4 @@ kind: Kustomization
 # "clustered" all-in-one installation (including event-bus)
 resources:
   - "github.com/argoproj/argo-events/manifests/cluster-install?ref=v1.4.0"
+  - event-bus.yaml
