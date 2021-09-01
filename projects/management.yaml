@@ -3,6 +3,8 @@ kind: AppProject
 metadata:
   name: management
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   clusterResourceWhitelist:
   - group: '*'
